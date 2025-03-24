@@ -1,0 +1,172 @@
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: black !important;
+  color: white !important;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 16px;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .footer-container {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.footer-title {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: bold;
+  width: 100%;
+}
+
+.footer-highlight {
+  color: #FFD700 !important; /* Altın Sarısı */
+}
+
+.footer-copyright {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #cccccc !important;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  font-size: clamp(12px, 1.5vw, 14px);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #cccccc !important;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.footer-links a:hover {
+  color: white !important;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .footer-icons {
+    gap: 12px;
+    margin-top: 16px;
+  }
+}
+
+.footer-icons a {
+  color: #cccccc !important;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: white !important;
+}
+
+.footer-apps {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .footer-apps {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-apps img {
+  height: 40px !important;
+  width: auto !important;
+}
+
+@media (max-width: 600px) {
+  .footer-apps img {
+    height: 36px !important;
+  }
+}
+
+/* Hyperlink styles */
+.hyperlink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  width: 100%;
+}
+
+.hyperlink:hover {
+  color: #FFC300 !important;
+}
+
+@media (max-width: 600px) {
+  .hyperlink {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Remove extra spacing at the bottom */
+.MuiContainer-root:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Ensure full width on mobile */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .MuiToolbar-root {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+}

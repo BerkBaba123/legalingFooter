@@ -1,0 +1,365 @@
+/* Sidebar styles */
+.sidebar-container {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1E1E1E;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    transition: all 0.3s ease-in-out;
+    z-index: 1200;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .sidebar-container {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+
+    .sidebar-container.open {
+        transform: translateX(0);
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 960px) {
+    .sidebar-container {
+        width: 280px;
+        transform: translateX(-280px);
+    }
+
+    .sidebar-container.open {
+        transform: translateX(0);
+    }
+}
+
+/* Sidebar collapsed state */
+.sidebar-container.collapsed {
+    width: 45px;
+}
+
+/* Sidebar kapalıyken taşan metinleri tamamen gizle */
+.sidebar-container.collapsed .pro-menu-item {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    visibility: hidden;
+}
+
+/* Sidebar kapalıyken ikonlar ortalansın ve görünsün */
+.sidebar-container.collapsed .pro-menu-item svg {
+    margin-right: 0 !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    visibility: visible;
+    box-shadow: none !important;
+}
+
+/* Sidebar kapalıyken text tamamen yok edilsin */
+.sidebar-container.collapsed .pro-menu-item span {
+    display: none !important;
+}
+
+/* İçeriği sağa kaydır */
+.main-content {
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 250px;
+}
+
+.sidebar-container.collapsed ~ .main-content {
+    margin-left: 75px; /* Sidebar daha dar olduğu için içeriğin sola kayması ayarlandı */
+}
+
+/* Menü stilleri */
+.sidebar-menu {
+    padding-top: 20px;
+}
+
+/* Menu items - gölge ve 3D efektlerini kaldır */
+.sidebar-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 60px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+@media (max-width: 600px) {
+    .sidebar-menu-item {
+        border-radius: 0;
+        margin-bottom: 0;
+        padding: 16px;
+    }
+}
+
+.sidebar-menu-item:hover {
+    background-color: #E8E8E8;
+}
+
+/* Selected menu item - gölge ve 3D efektlerini kaldır */
+.selected {
+    background-color: #E8E8E8 !important;
+    color: #080808;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.selected .MuiListItemIcon-root .MuiSvgIcon-root {
+    color: #080808 !important;
+}
+
+/* "Hesabımı Yükselt" özel tasarım */
+.account-upgrade {
+    background-color: #ffc300;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.account-upgrade:hover {
+    background-color: #ffb000;
+}
+
+/* Sidebar içinde yatay kaydırma çubuğunu kaldır */
+.sidebar-container {
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+/* Sidebar kapalıyken gereksiz scrollbar oluşmasını engelle */
+.sidebar-container.collapsed {
+    overflow-x: hidden !important;
+}
+
+/* Genel olarak sayfa içinde scrollbar'ı kaldırmak için */
+body {
+    overflow-x: hidden;
+}
+
+/* Upgrade button special styles */
+.upgrade-button {
+    background-color: #FFC300;
+    color: white;
+}
+
+.upgrade-button:hover {
+    background-color: #e6b000;
+}
+
+/* Menu text styles */
+.menu-text {
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 601px) {
+    .menu-text {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar-menu-item:hover .menu-text {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile menu button gölgesini kaldır */
+.mobile-menu-button {
+    display: none;
+    position: fixed;
+    left: 20px;
+    top: 137px;
+    z-index: 1300;
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+    border: 1px solid #E8E8E8;
+    background-color: #FFFFFF;
+    box-shadow: none !important;
+}
+
+@media (max-width: 600px) {
+    .mobile-menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode .sidebar-container {
+    background-color: #161719;
+}
+
+body.dark-mode .mobile-menu-button {
+    background-color: #161719;
+    border-color: #5D5D5D;
+}
+
+body.dark-mode .sidebar-menu-item:hover {
+    background-color: #202124;
+}
+
+/* Drawer kağıt efektini kaldır */
+.MuiDrawer-paper {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* ListItem hover ve seçili durumlarında gölge ve 3D efektlerini kaldır */
+.MuiListItem-root {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.MuiListItem-root:hover,
+.MuiListItem-root.Mui-selected {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Animation for mobile menu */
+.mobile-menu-enter {
+    transform: translateX(-100%);
+}
+
+.mobile-menu-enter-active {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu-exit {
+    transform: translateX(0);
+}
+
+.mobile-menu-exit-active {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Fontello icon styles */
+[class^="legaling-"]:before,
+[class*=" legaling-"]:before {
+  font-family: "legaling_icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: inherit;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.legaling-home:before { content: '\e807'; }
+.legaling-legal_hammer:before { content: '\e800'; }
+.legaling-logout:before { content: '\e801'; }
+.legaling-magnifier:before { content: '\e802'; }
+.legaling-professional:before { content: '\e803'; }
+.legaling-user:before { content: '\e804'; }
+.legaling-academy:before { content: '\e805'; }
+.legaling-info:before { content: '\e806'; }
+.legaling-error:before { content: '\e808'; }
+.legaling-lock:before { content: '\e809'; }
+.legaling-tick:before { content: '\e80a'; }
+.legaling-history:before { content: '\e80b'; }
+.legaling-e80f:before { content: '\e80f'; }
+.legaling-e811:before { content: '\e811'; }
+.legaling-e80e:before { content: '\e80e'; }
+.legaling-e80d:before { content: '\e80d'; }
+.legaling-e810:before { content: '\e810'; }
+
+/* ListItemIcon için ortalama stilleri */
+.MuiListItemIcon-root {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 46px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  transform: none !important;
+  transition: none !important;
+  box-sizing: border-box !important;
+  padding-left: 12px !important;
+}
+
+.MuiListItemIcon-root .MuiSvgIcon-root,
+.MuiListItemIcon-root i {
+  width: 20px !important;
+  height: 20px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  transition: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Hover durumunda ListItemIcon'un pozisyonunu koruma */
+.MuiListItem-root:hover .MuiListItemIcon-root {
+  left: 0 !important;
+  transform: none !important;
+}
+
+/* ListItem padding düzeltmesi */
+.MuiListItem-root {
+  padding: 0 !important;
+}
+
+/* Hesabımı Yükselt butonu için özel hover durumu */
+.MuiListItem-root[href="/upgrade"]:hover .MuiListItemIcon-root i,
+.MuiListItem-root[href="/upgrade"]:hover .MuiListItemIcon-root .MuiSvgIcon-root {
+  color: #FFFFFF !important;
+}
+
+/* Hesabımı Yükselt butonu için özel hover genişliği */
+.MuiListItem-root[href="/upgrade"]:hover {
+  width: 180px !important;
+  background-color: #FFC300 !important;
+}
+
+/* Menu text için ek alan */
+.MuiListItem-root[href="/upgrade"]:hover .menu-text {
+  width: 136px !important; /* 180px - 44px (ikon genişliği) */
+}
