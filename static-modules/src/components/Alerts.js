@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef, useImperativeHandle } from "react";
+import { Alert, Snackbar } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
-const Alerts = () => {
+const Alerts = forwardRef((props, ref) => {
   const [alert, setAlert] = useState(null);
+  const theme = useTheme();
 
   // Alert gösterme fonksiyonu
   const showAlert = (type, message) => {
@@ -9,32 +12,52 @@ const Alerts = () => {
     setTimeout(() => setAlert(null), 3000); // 3 saniye sonra kapat
   };
 
+  // Dışarıdan erişim için fonksiyonları expose et
+  useImperativeHandle(ref, () => ({
+    showAlert
+  }));
+
   return (
-    <div className="container mt-4 text-center">
-      <h2>Alerts & Confirmations</h2>
-
-      {/* Alert Göster */}
+    <Snackbar
+      open={!!alert}
+      autoHideDuration={3000}
+      onClose={() => setAlert(null)}
+      anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      sx={{
+        position: 'fixed',
+        top: '20px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        zIndex: 9999
+      }}
+    >
       {alert && (
-        <div className={`alert alert-${alert.type} alert-dismissible fade show`} role="alert">
+        <Alert 
+          severity={alert.type} 
+          onClose={() => setAlert(null)}
+          sx={{ 
+            minWidth: '300px',
+            color: theme.palette.text.primary,
+            backgroundColor: theme.palette.mode === 'dark' 
+              ? 'rgba(0, 0, 0, 0.9)' 
+              : 'rgba(255, 255, 255, 0.9)',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)',
+            '& .MuiAlert-icon': {
+              color: alert.type === 'success' 
+                ? '#4CAF50' 
+                : alert.type === 'error'
+                ? '#f44336'
+                : alert.type === 'warning'
+                ? '#ff9800'
+                : '#2196f3'
+            }
+          }}
+        >
           {alert.message}
-        </div>
+        </Alert>
       )}
-
-      {/* Butonlar */}
-      <button className="btn btn-success m-2" onClick={() => showAlert("success", "Başarıyla tamamlandı!")}>
-        Başarı Mesajı
-      </button>
-      <button className="btn btn-danger m-2" onClick={() => showAlert("danger", "Hata oluştu!")}>
-        Hata Mesajı
-      </button>
-      <button className="btn btn-warning m-2" onClick={() => showAlert("warning", "Dikkat!")}>
-        Uyarı Mesajı
-      </button>
-      <button className="btn btn-info m-2" onClick={() => showAlert("info", "Bilgilendirme mesajı.")}>
-        Bilgi Mesajı
-      </button>
-    </div>
+    </Snackbar>
   );
-};
+});
 
 export default Alerts;

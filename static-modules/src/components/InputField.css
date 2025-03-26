@@ -1,0 +1,565 @@
+/* Genel Input Container Stili */
+.input-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 371px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Genel Input Stili */
+.input-field {
+  width: 100% !important;
+  max-width: 371px !important;
+  height: 42px !important;
+  border-radius: 10px !important;
+  background: #D9D9D9 !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #161719 !important;
+  border: none !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Input Boyutları */
+.input-container.small-input {
+  width: 100% !important;
+  max-width: 200px !important;
+}
+
+.input-container.large-input {
+  width: 100% !important;
+  max-width: 500px !important;
+}
+
+.input-field.small-input {
+  width: 100% !important;
+  max-width: 200px !important;
+}
+
+.input-field.large-input {
+  width: 100% !important;
+  max-width: 500px !important;
+}
+
+/* Float Label Gizleme */
+.MuiInputLabel-root,
+.MuiFormLabel-root,
+.MuiInputLabel-formControl {
+  display: none !important;
+}
+
+/* Normal Input Stili */
+.input-field .MuiOutlinedInput-root {
+  width: 100% !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  border-radius: 10px !important;
+  background-color: #D9D9D9 !important;
+  border: none !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+.input-field .MuiOutlinedInput-input {
+  width: 100% !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  padding: 8px !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  color: #161719 !important;
+  box-sizing: border-box !important;
+}
+
+/* Input Placeholder Stili */
+.input-field .MuiOutlinedInput-input::placeholder,
+.input-field .MuiInputBase-input::placeholder,
+.input-field .MuiSelect-select em {
+  color: rgba(22, 23, 25, 0.7) !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  font-family: inherit !important;
+  text-align: left !important;
+}
+
+/* Dark mode placeholder stili */
+body.dark-mode .input-field .MuiOutlinedInput-input::placeholder,
+body.dark-mode .input-field .MuiInputBase-input::placeholder,
+body.dark-mode .input-field .MuiSelect-select em {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Input içeriği stili */
+.input-field .MuiOutlinedInput-input,
+.input-field .MuiInputBase-input {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  font-family: inherit !important;
+  color: #161719 !important;
+}
+
+/* Dark mode input içeriği stili */
+body.dark-mode .input-field .MuiOutlinedInput-input,
+body.dark-mode .input-field .MuiInputBase-input {
+  color: #FFFFFF !important;
+}
+
+/* Select Picker Stili */
+.input-field.MuiSelect-root {
+  width: 100% !important;
+  height: 42px !important;
+  border-radius: 10px !important;
+  background: #D9D9D9 !important;
+  padding: 8px !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #161719 !important;
+  border: none !important;
+  outline: none !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.input-field .MuiSelect-select {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  padding-left: 8px !important;
+}
+
+/* Select ikon stilini güncelle */
+.input-field .MuiSelect-icon {
+  color: #161719 !important;
+  opacity: 1 !important;
+  font-weight: bold !important;
+  right: 15px !important;
+  font-size: 24px !important;
+}
+
+/* Dark mode için ikon rengi */
+body.dark-mode .input-field .MuiSelect-icon {
+  color: #FFFFFF !important;
+}
+
+/* Select Menu Stili */
+.MuiMenu-paper {
+  margin-top: 4px !important;
+  background: #D9D9D9 !important;
+  border-radius: 10px !important;
+  max-width: calc(100vw - 32px) !important;
+  width: 371px !important;
+}
+
+/* Homepage Select özel stili */
+.homepage-select + .MuiMenu-paper {
+  width: 171.15px !important;
+}
+
+.MuiMenuItem-root {
+  padding: 8px !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #161719 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+.MuiMenuItem-root:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background-color: #FFC300 !important;
+}
+
+.MuiMenuItem-root.Mui-selected:hover {
+  background-color: #FFC300 !important;
+}
+
+/* Select Placeholder Stili */
+.MuiSelect-select em {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  padding-left: 0 !important;
+}
+
+/* Outline Kaldırma */
+.input-field .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+/* Telefon Input Stili */
+.cleave-input {
+  width: 100% !important;
+  max-width: 371px !important;
+  height: 42px !important;
+  border-radius: 10px !important;
+  padding: 12px 15px !important;
+  font-size: 15px !important;
+  background-color: #D9D9D9 !important;
+  color: #161719 !important;
+  border: none !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+/* DatePicker Stili */
+.input-field .MuiInputBase-root.MuiOutlinedInput-root {
+  width: 100% !important;
+  max-width: 371px !important;
+  height: 42px !important;
+  border-radius: 10px !important;
+  background-color: #D9D9D9 !important;
+  padding-right: 14px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.input-field .MuiInputBase-root.MuiOutlinedInput-root input {
+  padding: 12px 15px !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 100% !important;
+  color: #161719 !important;
+  width: calc(100% - 40px) !important;
+  box-sizing: border-box !important;
+}
+
+/* DatePicker Placeholder Stili */
+.input-field .MuiInputBase-root.MuiOutlinedInput-root input::placeholder,
+.input-field .MuiInputBase-root.MuiOutlinedInput-root .MuiInputBase-input::placeholder {
+  color: #161719 !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.input-field .MuiInputBase-root.MuiOutlinedInput-root input:not(:focus)::placeholder,
+.input-field .MuiInputBase-root.MuiOutlinedInput-root .MuiInputBase-input:not(:focus)::placeholder {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* DatePicker İkon Stili */
+.input-field .MuiInputAdornment-root {
+  margin: 0 !important;
+  height: 42px !important;
+  max-height: 42px !important;
+  position: absolute !important;
+  right: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.input-field .MuiInputAdornment-root .MuiButtonBase-root {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.input-field .MuiInputAdornment-root .MuiSvgIcon-root {
+  width: 20px !important;
+  height: 20px !important;
+  color: #161719 !important;
+}
+
+/* Autocomplete Input Stili */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+.input-field .MuiOutlinedInput-input:-webkit-autofill,
+.input-field .MuiOutlinedInput-input:-webkit-autofill:hover,
+.input-field .MuiOutlinedInput-input:-webkit-autofill:focus,
+.input-field .MuiOutlinedInput-input:-webkit-autofill:active {
+  width: 100% !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  padding: 12px 15px !important;
+  -webkit-box-shadow: 0 0 0 42px #D9D9D9 inset !important;
+  -webkit-text-fill-color: #161719 !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 100% !important;
+  caret-color: #161719 !important;
+  box-sizing: border-box !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* Autocomplete Container Stili */
+.MuiAutocomplete-root,
+.MuiAutocomplete-inputRoot,
+.input-field .MuiAutocomplete-root,
+.input-field .MuiAutocomplete-inputRoot {
+  width: 100% !important;
+  max-width: 371px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  box-sizing: border-box !important;
+}
+
+/* Autocomplete Dropdown Stili */
+.MuiAutocomplete-popper {
+  width: 100% !important;
+  max-width: 371px !important;
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 600px) {
+  .input-container,
+  .input-container.small-input,
+  .input-container.large-input,
+  .input-field,
+  .input-field.small-input,
+  .input-field.large-input,
+  .input-field .MuiOutlinedInput-root,
+  .input-field.MuiSelect-root,
+  .cleave-input,
+  .MuiAutocomplete-root,
+  .MuiAutocomplete-inputRoot {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .MuiMenu-paper {
+    width: calc(100vw - 32px) !important;
+    max-width: 371px !important;
+    margin: 0 16px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .input-field .MuiOutlinedInput-input,
+  .MuiMenuItem-root {
+    font-size: 14px !important;
+  }
+
+  .MuiMenuItem-root {
+    padding: 10px 12px !important;
+  }
+
+  /* DatePicker mobil düzenlemesi */
+  .MuiPickersPopper-root {
+    width: calc(100vw - 32px) !important;
+    max-width: 371px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+/* Responsive Design - Tablet */
+@media (min-width: 601px) and (max-width: 960px) {
+  .input-container,
+  .input-container.small-input,
+  .input-container.large-input,
+  .input-field,
+  .input-field.small-input,
+  .input-field.large-input,
+  .input-field .MuiOutlinedInput-root,
+  .input-field.MuiSelect-root,
+  .cleave-input,
+  .MuiAutocomplete-root,
+  .MuiAutocomplete-inputRoot {
+    width: 100% !important;
+    max-width: 371px !important;
+    min-width: 0 !important;
+  }
+
+  .MuiMenu-paper {
+    width: 371px !important;
+    max-width: calc(100vw - 64px) !important;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode .input-field,
+body.dark-mode .cleave-input,
+body.dark-mode .MuiMenu-paper {
+  background-color: #161719 !important;
+  color: #FFFFFF !important;
+}
+
+body.dark-mode .input-field .MuiOutlinedInput-input,
+body.dark-mode .cleave-input,
+body.dark-mode .MuiMenuItem-root {
+  color: #FFFFFF !important;
+}
+
+body.dark-mode .MuiMenuItem-root:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Error State */
+.input-field.Mui-error .MuiOutlinedInput-root {
+  background-color: rgba(211, 47, 47, 0.1) !important;
+}
+
+/* Focus State */
+.input-field .MuiOutlinedInput-root.Mui-focused {
+  background-color: #E8E8E8 !important;
+}
+
+body.dark-mode .input-field .MuiOutlinedInput-root.Mui-focused {
+  background-color: #202124 !important;
+}
+
+/* DatePicker Popper (açılan takvim) için stil */
+.MuiPickersPopper-root {
+  & .MuiPickersYear-yearButton.Mui-selected {
+    background-color: #FFC300 !important;
+    color: #000000 !important;
+    &:hover {
+      background-color: #e6b000 !important;
+    }
+  }
+  
+  & .MuiPickersDay-root.Mui-selected {
+    background-color: #FFC300 !important;
+    color: #000000 !important;
+    &:hover {
+      background-color: #e6b000 !important;
+    }
+  }
+}
+
+/* DatePicker Dark Mode Stilleri */
+body.dark-mode .MuiDateCalendar-root,
+body.dark-mode .MuiYearCalendar-root,
+body.dark-mode .MuiPickersPopper-root .MuiPaper-root {
+  background-color: #161719 !important;
+}
+
+body.dark-mode .MuiPickersPopper-root {
+  /* Calendar arka planı */
+  & .MuiPickersCalendarHeader-root,
+  & .MuiPickersYear-root,
+  & .MuiDayCalendar-monthContainer,
+  & .MuiDayCalendar-weekContainer,
+  & .MuiDayCalendar-header,
+  & .MuiPickersDay-root:not(.Mui-selected) {
+    background-color: #161719 !important;
+  }
+
+  /* Metin renkleri */
+  & .MuiPickersCalendarHeader-label,
+  & .MuiPickersYear-yearButton:not(.Mui-selected),
+  & .MuiPickersDay-root:not(.Mui-selected),
+  & .MuiDayCalendar-weekDayLabel {
+    color: #FFFFFF !important;
+  }
+
+  /* Ok butonları */
+  & .MuiPickersArrowSwitcher-button {
+    color: #FFFFFF !important;
+    
+    &:hover {
+      background-color: #202124 !important;
+    }
+  }
+
+  /* Hover durumları */
+  & .MuiPickersDay-root:not(.Mui-selected):hover,
+  & .MuiPickersYear-yearButton:not(.Mui-selected):hover {
+    background-color: #202124 !important;
+  }
+
+  /* Bugünün tarihi */
+  & .MuiPickersDay-today:not(.Mui-selected) {
+    border-color: #FFC300 !important;
+  }
+}
+
+/* DatePicker Dialog arka planı */
+body.dark-mode .MuiDialog-paper {
+  background-color: #161719 !important;
+}
+
+/* Mesaj Alanı Özel Stili */
+.input-field.message-input {
+  width: 100% !important;
+  max-width: 371px !important;
+}
+
+.input-field.message-input .MuiOutlinedInput-root {
+  height: auto !important;
+  min-height: 180px !important;
+  max-height: none !important;
+  padding: 12px 15px !important;
+  background-color: #D9D9D9 !important;
+  border-radius: 10px !important;
+}
+
+.input-field.message-input .MuiOutlinedInput-input {
+  height: auto !important;
+  min-height: 180px !important;
+  max-height: none !important;
+  padding: 0 !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  color: #161719 !important;
+  resize: vertical !important;
+}
+
+/* Dark mode için mesaj alanı */
+body.dark-mode .input-field.message-input .MuiOutlinedInput-root {
+  background-color: #161719 !important;
+}
+
+body.dark-mode .input-field.message-input .MuiOutlinedInput-input {
+  color: #FFFFFF !important;
+}
+
+/* Mesaj alanı placeholder stili */
+.input-field.message-input .MuiOutlinedInput-input::placeholder {
+  color: #161719 !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+body.dark-mode .input-field.message-input .MuiOutlinedInput-input::placeholder {
+  color: #FFFFFF !important;
+}
+
+/* Mesaj alanı focus stili */
+.input-field.message-input .MuiOutlinedInput-root.Mui-focused {
+  background-color: #E8E8E8 !important;
+}
+
+body.dark-mode .input-field.message-input .MuiOutlinedInput-root.Mui-focused {
+  background-color: #202124 !important;
+}
+
+/* Responsive tasarım için mesaj alanı */
+@media (max-width: 600px) {
+  .input-field.message-input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .input-field.message-input .MuiOutlinedInput-root {
+    min-height: 150px !important;
+    width: 100% !important;
+  }
+  
+  .input-field.message-input .MuiOutlinedInput-input {
+    min-height: 150px !important;
+    font-size: 14px !important;
+  }
+}

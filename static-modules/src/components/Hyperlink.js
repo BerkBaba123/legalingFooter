@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "@mui/material";
 
-const Hyperlink = ({ url, label, icon }) => {
+const Hyperlink = ({ url, label }) => {
   return (
-    <a href={url} className="text-decoration-none d-flex align-items-center gap-2" target="_blank" rel="noopener noreferrer">
-      {icon && <i className={`fab fa-${icon} fa-lg`}></i>}
+    <Link href={url} target="_blank" rel="noopener noreferrer" sx={{ textDecoration: "none", color: "inherit" }}>
       {label}
-    </a>
+    </Link>
   );
 };
 

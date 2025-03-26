@@ -1,27 +1,21 @@
 import React from "react";
-import styles from "./Button.module.css"
-import clsx from 'clsx';
+import { Button } from "@mui/material";
 
-const Button = ({ type, label }) => {
-  let className = " btn ";
+const CustomButton = ({ type, label }) => {
+  let color = "primary";
 
   switch (type) {
-    case "primary":
-      className += "btn-primary";
-      break;
     case "secondary":
-      className += "btn-secondary";
+      color = "secondary";
       break;
     case "tertiary":
-      className += "btn-outline-dark";
+      color = "inherit";
       break;
     default:
-      className += "btn-light";
+      color = "primary";
   }
 
-  return <button className={clsx(className, styles.lgbutton, {
-        [styles.primary]: type === "primary"
-    })}>{label}</button>;
+  return <Button variant="contained" color={color}>{label}</Button>;
 };
 
-export default Button;
+export default CustomButton;

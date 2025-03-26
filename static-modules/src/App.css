@@ -1,78 +1,36 @@
+/* Genel ayarlar */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  height: 100vh !important;
-  overflow: hidden !important;
-}
-
-.container {
-  padding: 20px;
-}
-
-/* Sidebar'ın sayfaya düzgün oturması */
-.app-container {
+  transition: background-color 0.3s, color 0.3s;
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-/* İçerik alanının Sidebar'a göre konumlanmasını sağlar */
+/* Uygulama konteyneri */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* İçerik alanı */
 .main-content {
   flex-grow: 1;
   padding: 20px;
+  margin-left: 250px; /* Sidebar genişliği */
   transition: margin-left 0.3s ease-in-out;
-  margin-left: 0px !important;
 }
 
-/* react-pro-sidebar uyumlu hale getirildi */
-.pro-sidebar {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  height: 100vh !important;
-  background-color: #1E1E1E !important;
-  transition: width 0.3s ease-in-out !important;
-  overflow-y: auto !important;
-  scrollbar-width: thin !important;
+/* Sidebar kapandığında içerik kayma ayarı */
+.drawer-closed ~ .main-content {
+  margin-left: 80px;
 }
 
-.pro-sidebar.collapsed {
-  width: 80px !important;
-}
-
-.pro-sidebar .pro-menu {
-  padding-top: 20px !important;
-}
-
-.pro-sidebar .pro-menu-item {
-  display: flex !important;
-  align-items: center !important;
-  color: white !important;
-  padding: 12px !important;
-  border-radius: 50px !important;
-  transition: background 0.3s ease-in-out !important;
-}
-
-.pro-sidebar .pro-menu-item:hover {
-  background-color: #252525 !important; /* Daha koyu gri */
-}
-
-.ps-menu-button:hover {
-  background-color: #252525 !important; /* Daha koyu gri */
-}
-
-.pro-sidebar .pro-menu-item svg {
-  margin-right: 15px !important;
-}
-
-/* Seçili olan menü tasarımı */
-.selected {
-  background-color: #eee !important;
-  color: black !important;
-  border-radius: 50px !important;
-}
-
-/* Sarı vurgu rengi */
-.highlight {
-  color: #facc15 !important;
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;  /* Footer'ın en alta sabitlenmesini sağlar */
+  position: relative;
+  bottom: 0;
 }

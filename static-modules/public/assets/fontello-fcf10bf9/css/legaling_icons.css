@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'legaling_icons';
+  src: url('../font/legaling_icons.eot?32542999');
+  src: url('../font/legaling_icons.eot?32542999#iefix') format('embedded-opentype'),
+       url('../font/legaling_icons.woff2?32542999') format('woff2'),
+       url('../font/legaling_icons.woff?32542999') format('woff'),
+       url('../font/legaling_icons.ttf?32542999') format('truetype'),
+       url('../font/legaling_icons.svg?32542999#legaling_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'legaling_icons';
+    src: url('../font/legaling_icons.svg?32542999#legaling_icons') format('svg');
+  }
+}
+*/
+[class^="legaling-"]:before, [class*=" legaling-"]:before {
+  font-family: "legaling_icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.legaling-legal_hammer:before { content: '\e800'; } /* '' */
+.legaling-logout:before { content: '\e801'; } /* '' */
+.legaling-magnifier:before { content: '\e802'; } /* '' */
+.legaling-professional:before { content: '\e803'; } /* '' */
+.legaling-user:before { content: '\e804'; } /* '' */
+.legaling-academy:before { content: '\e805'; } /* '' */
+.legaling-info:before { content: '\e806'; } /* '' */
+.legaling-error:before { content: '\e808'; } /* '' */
+.legaling-lock:before { content: '\e809'; } /* '' */
+.legaling-tick:before { content: '\e80a'; } /* '' */
+.legaling-history:before { content: '\e80b'; } /* '' */
+.legaling-heart:before { content: '\e80c'; } /* '' */
+.legaling-frame-114:before { content: '\e80d'; } /* '' */
+.legaling-subtract:before { content: '\e80e'; } /* '' */
+.legaling-home:before { content: '\e80f'; } /* '' */
+.legaling-office-favourite:before { content: '\e810'; } /* '' */
+.legaling-office:before { content: '\e811'; } /* '' */
+.legaling-frame-117:before { content: '\e812'; } /* '' */
+.legaling-graduation-cap-02:before { content: '\e813'; } /* '' */
+.legaling-paperplane:before { content: '\e815'; } /* '' */

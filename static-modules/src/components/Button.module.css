@@ -1,7 +1,141 @@
+/* Genel Buton Stili */
 .lgbutton {
-    border-radius: 5px !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    transition: all 0.3s ease-in-out !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-height: 42px !important;
 }
 
+/* Ana Renkli Buton */
 .primary {
-    background-color: #ffc300 !important;
+    background-color: #FFC300 !important;
+    color: #000 !important;
+}
+
+.primary:hover {
+    background-color: #FFD700 !important;
+}
+
+/* İkincil Buton */
+.secondary {
+    background-color: #1E1E1E !important;
+    color: #fff !important;
+    border: 1px solid #333 !important;
+}
+
+body.light-mode .secondary {
+    background-color: #F5F5F5 !important;
+    color: #000 !important;
+    border: 1px solid #DDD !important;
+}
+
+.secondary:hover {
+    background-color: #2A2A2A !important;
+}
+
+body.light-mode .secondary:hover {
+    background-color: #E0E0E0 !important;
+}
+
+/* Arama Butonu */
+.searchButton {
+    width: 162px !important;
+    height: 48px !important;
+    background-color: #FFC300 !important;
+    color: #000 !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-left: -1px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    padding: 6px 16px !important;
+    min-width: 162px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #333 !important;
+}
+
+body.light-mode .searchButton {
+    border-color: #DDD !important;
+}
+
+.searchButton:hover {
+    background-color: #FFD700 !important;
+}
+
+/* Sosyal Medya Buton Stili */
+.socialLoginButton {
+  justify-content: flex-start !important;
+  padding: 0 15px !important;
+  width: 100% !important;
+  height: 42px !important;
+  border-radius: 10px !important;
+  margin-bottom: 8px !important;
+  text-transform: capitalize !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: left !important;
+  border: 1px solid transparent !important;
+  color: #FFFFFF !important;
+}
+
+.socialLoginButton svg {
+  font-size: 20px !important;
+  margin: 0 12px 0 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  color: #FFFFFF !important;
+}
+
+.socialLoginButton:hover {
+  background-color: transparent !important;
+}
+
+.socialLoginButton.dark {
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
+
+.socialLoginButton.light {
+  border-color: #080808 !important;
+  color: #080808 !important;
+}
+
+.google {
+  background-color: #DB4437 !important;
+  border-color: #DB4437 !important;
+  color: #FFFFFF !important;
+}
+
+.google:hover {
+  background-color: #C53929 !important;
+  border-color: #C53929 !important;
+}
+
+.linkedin {
+  background-color: #0077B5 !important;
+  border-color: #0077B5 !important;
+  color: #FFFFFF !important;
+}
+
+.linkedin:hover {
+  background-color: #006399 !important;
+  border-color: #006399 !important;
+}
+
+.apple {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.apple:hover {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
 }
