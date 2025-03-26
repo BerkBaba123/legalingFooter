@@ -12,35 +12,88 @@ import About from "./pages/About";
 import Account from "./pages/Accounts/Account";
 import Services from "./pages/Payments/Services";
 import PageManager from "./pages/PageManager";
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import "./App.css";
 
-// Tema context
+// Tema Context'i
 export const ThemeContext = createContext();
+
 export const useThemeContext = () => {
   const context = useContext(ThemeContext);
-  if (!context) throw new Error("useThemeContext must be used within a ThemeProvider");
+  if (!context) {
+    throw new Error('useThemeContext must be used within a ThemeProvider');
+  }
   return context;
 };
 
-// Temalar
+// Tema tanımları
 const lightTheme = createTheme({
   palette: {
     mode: "light",
-    primary: { main: "#1976d2" },
-    background: { default: "#F6F6F6", paper: "#f5f5f5" },
-    text: { primary: "#000000" },
+    primary: {
+      main: "#1976d2",
+    },
+    background: {
+      default: "#F6F6F6",
+      paper: "#f5f5f5",
+    },
+    text: {
+      primary: "#000000",
+    },
   },
 });
 
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
-    primary: { main: "#90caf9" },
-    background: { default: "#000000", paper: "#1e1e1e" },
-    text: { primary: "#ffffff" },
+    primary: {
+      main: "#90caf9",
+    },
+    background: {
+      default: "#000000",
+      paper: "#1e1e1e",
+    },
+    text: {
+      primary: "#ffffff",
+    },
   },
 });
+
+// Banner bileşeni
+const AdBanner = ({ isDarkMode }) => {
+  const { user } = useAuth();
+  
+  console.log('Current user:', user); // Debug için kullanıcı bilgisini logla
+  
+  // Plan kontrolü - plan bir obje olduğu için type veya name özelliğini kontrol ediyoruz
+  if (!user || user?.plan?.type?.toLowerCase() === 'temel' || user?.plan?.type?.toLowerCase() === 'basic' || 
+      user?.plan?.name?.toLowerCase() === 'temel' || user?.plan?.name?.toLowerCase() === 'basic') {
+    return (
+      <Box
+        sx={{
+          width: '100%',
+          height: '128px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          padding: '20px 50px',
+          margin: '0 auto',
+          backgroundColor: isDarkMode ? '#161719' : '#FFFFFF',
+        }}
+      >
+        <img 
+          src="/assets/Ad-Banner.png" 
+          alt="Advertisement Banner"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </Box>
+    );
+  }
+  return null;
+};
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -120,6 +173,7 @@ function App() {
                       <Route path="/about" element={<PageManager pageId="about" handleOpenModal={handleOpenModal} />} />
                       <Route path="/account" element={<PageManager pageId="account" handleOpenModal={handleOpenModal} />} />
                       <Route path="/suggest" element={<PageManager pageId="suggest" handleOpenModal={handleOpenModal} />} />
+                      <Route path="/services" element={<Services />} />
                       <Route path="*" element={<NotFound />} />
                     </Routes>
                   </Box>
